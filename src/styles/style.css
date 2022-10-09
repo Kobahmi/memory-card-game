@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background-color: rgb(255, 228, 228);
+  --font-color: rgb(82, 0, 82);
+  --font-fam: Dynapuff, sans-serif;
+}
+
+img {
+  width: 10rem;
+  height: 11rem;
+  transition: 0.1s ease-in-out;
+}
+
+img:hover {
+  scale: 105%;
+  animation: jump 0.3s linear alternate infinite;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: var(--font-color);
+  font-family: var(--font-fam);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  width: 100%;
+  padding: 1rem;
+  gap: 5rem;
+}
+
+.header img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-right: 5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 17rem;
+  border: none;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: var(--background-color);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.load-screen {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+
+.load-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: jump 0.3s linear alternate infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(4%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .logo-container {
+    flex-direction: column;
+  }
+  .score-container {
+    flex-direction: row;
+    padding: 0;
+  }
+}
