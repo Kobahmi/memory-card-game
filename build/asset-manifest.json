@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.3b94bf14.css",
+    "main.js": "/memory-card-game/static/js/main.636e0540.js",
+    "static/media/loveon.png": "/memory-card-game/static/media/loveon.5bcbcaa03e34e76d3d0c.png",
+    "static/media/vaporeon.png": "/memory-card-game/static/media/vaporeon.179bd91462cbfb9e9113.png",
+    "static/media/glaceon.png": "/memory-card-game/static/media/glaceon.49fbe55a788ba369b209.png",
+    "static/media/jolteon.png": "/memory-card-game/static/media/jolteon.062ac0db31f603092573.png",
+    "static/media/leafeon.png": "/memory-card-game/static/media/leafeon.3d90d924e8448bcd927e.png",
+    "static/media/eevee.png": "/memory-card-game/static/media/eevee.e90a6a0eacbe99d00906.png",
+    "static/media/flareon.png": "/memory-card-game/static/media/flareon.fc071cc314a4b2179828.png",
+    "static/media/umbreon.png": "/memory-card-game/static/media/umbreon.5193342c24f21b6d1951.png",
+    "static/media/logo.png": "/memory-card-game/static/media/logo.af8bac4affa36638c2bc.png",
+    "static/media/espeon.png": "/memory-card-game/static/media/espeon.77b15aa8268df9b8fe88.png",
+    "index.html": "/memory-card-game/index.html",
+    "main.3b94bf14.css.map": "/memory-card-game/static/css/main.3b94bf14.css.map",
+    "main.636e0540.js.map": "/memory-card-game/static/js/main.636e0540.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b94bf14.css",
+    "static/js/main.636e0540.js"
+  ]
+}

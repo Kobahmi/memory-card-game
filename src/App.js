@@ -3,6 +3,8 @@ import Board from "./components/Board";
 import images from "./components/CardDisplay";
 import Header from "./components/Header";
 import Loading from "./components/Loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [totalCards, setTotalCards] = useState([]);
@@ -36,20 +38,37 @@ const App = () => {
     setTotalCards(randomArray(totalCards));
     if (cards.find((element) => element === id)) {
       if (score > highscore) setHighscore(score);
+      notify();
       setScore(0);
       setCards([]);
       return;
     } else {
       setCards([...cards, id]);
       setScore(score + 1);
+      notifyLoss();
     }
   };
+
+  const notify = () => toast.success("New Highscore!");
+  const notifyLoss = () => toast.info("You lose!");
 
   return (
     <div className="content">
       {loading && <Loading />}
       <Header score={score} highscore={highscore} />
       <Board handleClick={handleClick} totalCards={totalCards} />
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
