@@ -37,20 +37,20 @@ const App = () => {
   const handleClick = (id) => {
     setTotalCards(randomArray(totalCards));
     if (cards.find((element) => element === id)) {
-      if (score > highscore) setHighscore(score);
-      notify();
+      if (score > highscore) {
+        setHighscore(score);
+        notify();
+      }
       setScore(0);
       setCards([]);
       return;
     } else {
       setCards([...cards, id]);
       setScore(score + 1);
-      notifyLoss();
     }
   };
 
   const notify = () => toast.success("New Highscore!");
-  const notifyLoss = () => toast.info("You lose!");
 
   return (
     <div className="content">
