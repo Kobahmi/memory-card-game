@@ -9,7 +9,7 @@ const Header = (props) => {
     <header className="header">
       <div className="logo-container">
         <img src={logo} alt="logo" />
-        <h1>Eeveelutions Memory Game</h1>
+        <h1>Eeveelutions Memory Game v2</h1>
       </div>
       <div className="score-container">
         <Highscore highscore={highscore} />
